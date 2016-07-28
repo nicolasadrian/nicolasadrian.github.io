@@ -17,8 +17,7 @@
   </head>
   <body>
     <div id="map"></div>
-     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCirQVWeLi8N5pqqAGJpCMFWjP_n4UpqNU&libraries=places&v=3.17"
-  type="text/javascript"></script>
+    
     <script>
 
 function initMap() {
@@ -28,12 +27,13 @@ function initMap() {
   });
 
   var ctaLayer = new google.maps.KmlLayer({
-    url: 'http://nicolasadrian.github.io/kmlmaps/kml/msmonsparcelas.kml',
+    url: 'https://raw.githubusercontent.com/nicolasadrian/nicolasadrian.github.io/master/kmlmaps/kml/msmonsparcelas.kml',
     map: map
   });
 }
 
     </script>
-   
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCirQVWeLi8N5pqqAGJpCMFWjP_n4UpqNU&libraries=places&v=3.17"
+  type="text/javascript"></script>
   </body>
 </html>
