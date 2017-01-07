@@ -9,7 +9,7 @@
         this.searchRadius = options.searchRadius || 805; //in meters ~ 1/2 mile
 
         // the encrypted Table ID of your Fusion Table (found under File => About)
-        this.fusionTableId = options.fusionTableId || "1LLpwbXL4Kj2jvKuI-z0mu7MWdW54Y5FhUGypNFyJ",
+        this.fusionTableId = options.fusionTableId || "10c6Ok19Ik1TVMUKzzUb774C1vo-glFIZPSyPn_Bs",
 
         // Found at https://console.developers.google.com/
         // Important! this key is for demonstration purposes. please register your own.
@@ -18,7 +18,7 @@
         // name of the location column in your Fusion Table.
         // NOTE: if your location column name has spaces in it, surround it with single quotes
         // example: locationColumn:     "'my location'",
-        this.locationColumn = options.locationColumn || "col27";
+        this.locationColumn = options.locationColumn || "col2";
         
         // appends to all address searches if not present
         this.locationScope = options.locationScope || "";
@@ -64,10 +64,6 @@
 		 $("#text_search").val(self.convertToPlainString($.address.parameter('text_search'))); //se agrega esta linea para que limpie el registro de busqueda cada vez que se agregue un box de busqueda por texto
 		 $("#text_search1").val(self.convertToPlainString($.address.parameter('text_search1'))); //se agrega esta linea para que limpie el registro de busqueda cada vez que se agregue un box de busqueda por texto 
 		 $("#text_search2").val(self.convertToPlainString($.address.parameter('text_search2'))); //se agrega esta linea para que limpie el registro de busqueda cada vez que se agregue un box de busqueda por texto
-		
-		 $("#text_search3").val(self.convertToPlainString($.address.parameter('text_search3'))); //se agrega esta linea para que limpie el registro de busqueda cada vez que se agregue un box de busqueda por texto
-		
-		 $("#text_search4").val(self.convertToPlainString($.address.parameter('text_search4'))); //se agrega esta linea para que limpie el registro de busqueda cada vez que se agregue un box de busqueda por texto
 		
         var loadRadius = self.convertToPlainString($.address.parameter('radius'));
         if (loadRadius != "") 
@@ -197,24 +193,18 @@ self.whereClause += " AND 'col13' <= '" + $("#age-selected-end").html() + "'";
 */
 	  var text_search = $("#text_search").val().replace("'", "\\'");
 if (text_search != '')
-  self.whereClause += " AND 'col11' contains ignoring case '" + text_search + "'";
+  self.whereClause += " AND 'col1' contains ignoring case '" + text_search + "'";
 	  
 	  var text_search1 = $("#text_search1").val().replace("'", "\\'");
 if (text_search1 != '')
-  self.whereClause += " AND 'col20' contains ignoring case '" + text_search1 + "'";
+  self.whereClause += " AND 'col5' contains ignoring case '" + text_search1 + "'";
 	   
 	   var text_search2 = $("#text_search2").val().replace("'", "\\'");
 if (text_search2 != '')
-  self.whereClause += " AND 'col19' contains ignoring case '" + text_search2 + "'";
+  self.whereClause += " AND 'col3' contains ignoring case '" + text_search2 + "'";
 	  
 	   
-	   var text_search3 = $("#text_search3").val().replace("'", "\\'");
-if (text_search3 != '')
-  self.whereClause += " AND 'col18' contains ignoring case '" + text_search3 + "'";
-	  
-	   var text_search4 = $("#text_search4").val().replace("'", "\\'");
-if (text_search4 != '')
-  self.whereClause += " AND 'col13' contains ignoring case '" + text_search4 + "'";
+	   
 	  
 	  
         //-----end of custom filters-----
