@@ -46,7 +46,7 @@
             zoom: this.defaultZoom,
             center: this.map_centroid,
             
-			mapTypeId: google.maps.MapTypeId.TERRAIN
+			mapTypeId: google.maps.MapTypeId.SATELLITE
         
 		};
         this.geocoder = new google.maps.Geocoder();
