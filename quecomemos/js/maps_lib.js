@@ -46,7 +46,7 @@
         this.myOptions = {
             zoom: this.defaultZoom,
             center: this.map_centroid,
-            mapTypeId: this.map_style,
+            //mapTypeId: this.map_style,
         
 		};
         this.geocoder = new google.maps.Geocoder();
