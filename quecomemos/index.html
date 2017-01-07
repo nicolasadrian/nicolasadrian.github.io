@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+<LINK REL="SHORTCUT ICON" HREF="favicon.ico">
+    <title>Que comemos? | Version Beta</title>
+	<meta charset='utf-8' />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/gmaps-sidebar.css" />
+	<link rel="stylesheet" href="css/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/custom.css"/>
+	
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body, #map {
+            height: 100%;
+            font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
+        }
+
+        .lorem {
+            font-style: italic;
+            color: #AAA;
+        }
+		 .loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('box2.png') 50% 50% no-repeat rgb(179,179,179);
+	
+}
+    </style>
+</head>
+<body >
+<div class="loader">
+
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(window).load(function() {
+	$(".loader").fadeOut("slow");
+})
+</script>
+    <div id="sidebar" class="sidebar collapsed">
+        <!-- Nav tabs -->
+        <div class="sidebar-tabs">
+            <ul role="tablist">
+                <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+                <li><a href="#profile" role="tab"><i class="fa fa-search"></i></a></li>
+				<li><a href="#messages" role="tab"><i class="fa fa-info"></i></a></li>
+                <!--<li><a href="#messages" role="tab"><i class="fa fa-envelope"></i></a></li>-->
+            </ul>
+<!--
+            <ul role="tablist">
+                <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
+            </ul>-->
+        </div>
+
+        <!-- Tab panes -->
+        <div class="sidebar-content">
+            <div class="sidebar-pane" id="home">
+                <h1 class="sidebar-header">
+                   Obras Registradas
+                    <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+<p>
+            </p>
+                <p class="lorem">El mapa de Obras registradas representa la localizacion de toda nueva edificacion o modificacion edilicia realizada en cualquier parcela de la Ciudad de Buenos Aires. Las obras se georreferencian a partir de los tramites iniciados en la Subsecretaria de Registros Interpretacion y Catastro. Mediante esta herramienta, los usuarios pueden consultar el mapa para informarse acerca de toda obra iniciada o proxima a hincarse en el area de su interes.</p>
+
+				<p class="lorem">Puede tambien consultar la base de Obras Registradas <a href="http://www.ssplan.buenosaires.gov.ar/_dgroc_obras/dgroc_obras_list.php" target="_blank">aqui</a>.</p>
+				
+				<p class="lorem">Puedes tambien descargar la base de Obras Registradas <p>
+            </p><a href="http://www.buenosaires.gob.ar/sites/gcaba/files/junio.pdf" target="_blank">Listado de obras registradas ordenadas por fecha, al 07/07/2016</a><p>
+            </p><a href="http://www.buenosaires.gob.ar/sites/gcaba/files/junioxdir.pdf" target="_blank">Listado de obras registradas ordenadas por direccion, al 07/07/2016</a>.</p>
+				
+            </div>
+
+            <div class="sidebar-pane" id="profile">
+            <h1 class="sidebar-header">Busquedas<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+			<h4>
+              Busca por Direccion <small>(<a id='find_me' href='#'>Mi ubicacion</a>)</small>
+            </h4>
+            <p>
+              <input class='form-control' id='search_address' placeholder='Ingrese una direccion o interseccion' type='text' />
+            </p>
+            
+			  <label>
+                ¿Cuanto queres caminar?
+                <select id='search_radius'>
+                  <option value='100'>100 metros</option>
+                  <option value='200'>200 metros</option>
+                  <option value='300'>300 metros</option>
+                  <option value='400'>400 metros</option>
+                  <option value='500'>500 metros</option>
+                  <option value='600'>600 metros</option>
+                  <option value='700'>700 metros</option>
+                  <option value='800'>800 metros</option>
+                  <option value='900'>900 metros</option>
+                  <option value='1000'>1 Kilometro</option>
+                </select>
+              </label>
+			  <h4>
+  ¿Que se te antoja?
+</h4>
+<input class='form-control' id='text_search' placeholder="Ensalada/Pizza/Helado" type='text' />
+              <p>
+            </p>
+			<h4>
+  ¿Con delivery?
+</h4>
+
+<input class='form-control' id='text_search1' placeholder="Si/No" type='text' />
+              <p>
+            </p>
+			
+			<h4>
+  ¿Sos Celiaco?
+</h4>
+
+<input class='form-control' id='text_search2' placeholder="Si/No" type='text' />
+
+              <p>
+            </p>
+		
+            </p>
+
+            <br />
+           
+            <br />
+            <a class='btn btn-primary' id='search' href='#'>
+              <i class='glyphicon glyphicon-search'></i>
+              Buscar
+            </a>
+            <a class='btn btn-default' id='reset' href='#'>
+              <i class='glyphicon glyphicon-repeat'></i>
+              Limpiar
+            </a>
+			<p>
+            </p>
+			  <div class='alert alert-info' id='result_box' ><strong id='result_count'></strong></div>
+            </div>
+
+           
+
+             <div class="sidebar-pane" id="messages">
+            <h1 class="sidebar-header">Modo de Uso<span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
+                </h1>
+				<p>
+				</p>
+				<p>
+				</p>
+				<p class="lorem">Para realizar busquedas de Obras Registradas usted puede realizarlas bajo distintos parametros.</p>
+				<p>
+				</p>
+				<p class="lorem"><strong>Direccion:</strong> Ingresando una direccion de la CABA, usted puede obtener las Obras Registradas cercanas a la misma, asi mismo, puede recortar la busqueda a un radio desde 100 metros a 1 kilometro a partir de dicho punto.</p>
+				<p>
+				</p>
+				<p class="lorem"><strong>SMP:</strong> En este campo usted puede realizar la busqueda de obras mediante el dato Seccion-Manzana-Parcela. Si ingresa un solo valor (ej. "025") el mapa le mostrara todos los puntos que contengan ese valor indiferente de su ubicacion en SMP.</p>
+				<p>
+				</p>
+				<p class="lorem"><strong>Barrio:</strong> Ingresando el nombre del mismo usted puede filtrar los resultados a este parametro.</p>
+				<p>
+				</p>
+				<p class="lorem"><strong>Distrito CPU:</strong> Ingresando el nombre del Distrito del Codigo de Planeamiento Urbano usted puede filtrar los resultados a este parametro (ej. "C3 II").</p>
+				<p>
+				</p>
+				<p class="lorem"><strong>Tipo de Obra:</strong> Dentro de estos, se puede realizar la busqueda mediante los parametros .</p>
+				<p class="lorem">- Aviso de Obra</p>
+				<p class="lorem">- Demolicion Parcial</p>
+				<p class="lorem">- Demolicion Parcial y Ampliacion de Obra</p>
+				<p class="lorem">- Demolicion Total</p>				
+				<p class="lorem">- Demolicion Total y Obra</p>	
+				<p class="lorem">- Obra Ejecutada Sin Permiso</p>
+				<p class="lorem">- Obra Nueva</p>
+				<p class="lorem">- Stock (Ampliacion y/o Modificacion c/demolicion parcial)</p>
+				<p class="lorem">- Stock (Demolicion Total)</p>
+				<p class="lorem">- Stock (Demolicion Total y Obra Nueva)</p>
+				<p class="lorem">- Stock (Obra Ejecutada Sin Permiso)</p>
+				<p class="lorem">- Stock (Obra Nueva)</p>
+				<p>
+				</p>
+				<p class="lorem"><strong>Año de Registro:</strong> Ingresando el Año en el que la obra fue registrada (NO es año del Expediente) del mismo usted puede filtrar los resultados a este parametro.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="map" class="sidebar-map"></div>
+
+   <a href="http://buenosaires.gob.ar/planeamiento" target="_blank"><img style="position: fixed; top: 0; right: 0; border: 0;" src="img/logo.png" alt="SSREGIC"></a>
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="./js/jquery-sidebar.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCirQVWeLi8N5pqqAGJpCMFWjP_n4UpqNU&libraries=places&v=3.17" type="text/javascript"></script>
+	
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.address.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/maps_lib.js"></script>
+	
+	<script type="text/javascript">
+      //<![CDATA[
+       
+        $(function() {
+          var myMap = new MapsLib({
+            fusionTableId:      "1LLpwbXL4Kj2jvKuI-z0mu7MWdW54Y5FhUGypNFyJ",
+            googleApiKey:       "AIzaSyCirQVWeLi8N5pqqAGJpCMFWjP_n4UpqNU",
+            locationColumn:     "col27",
+            map_center:         [-34.58697779341782, -58.38577318676755],
+            locationScope:      "Cdad. Autónoma de Buenos Aires"
+          });
+
+          var autocomplete = new google.maps.places.Autocomplete(document.getElementById('search_address'));
+          
+          $(':checkbox').click(function(){
+            myMap.doSearch();
+          });
+
+          $(':radio').click(function(){
+            myMap.doSearch();
+          });
+          
+          $('#search_radius').change(function(){
+            myMap.doSearch();
+          });
+          
+          $('#search').click(function(){
+            myMap.doSearch();
+          });
+          
+          $('#find_me').click(function(){
+            myMap.findMe(); 
+            return false;
+          });
+          
+          $('#reset').click(function(){
+            myMap.reset(); 
+            return false;
+          });
+          
+          $(":text").keydown(function(e){
+              var key =  e.keyCode ? e.keyCode : e.which;
+              if(key === 13) {
+                  $('#search').click();
+                  return false;
+              }
+          });
+        });
+      //]]>
+	  var sidebar = $('#sidebar').sidebar();
+	  
+    </script>
+
+</body>
+</html>
