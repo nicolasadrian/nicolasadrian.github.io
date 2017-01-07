@@ -50,7 +50,7 @@
         
 		};
         this.geocoder = new google.maps.Geocoder();
-        this.map = new google.maps.Map($("#map")[0], this.myOptions);
+        this.map = new google.maps.Map($("#map")[0], this.myOptions, this.map_style);
         
         // maintains map centerpoint for responsive design
         google.maps.event.addDomListener(self.map, 'idle', function () {
