@@ -441,53 +441,53 @@ footer .links-rel li:nth-child(1){
 }
 
 #block-menu-menu-redes-sociales ul.menu.nav li a.menu-redes-sociales-Facebook{
-    background-image: url(../img/social-fb.png);
-    background-image: url(../img/social-fb.svg), none;
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-fb.png);
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-fb.svg), none;
     background-size: cover;
     background-color: transparent;
 }
 
 
 #block-menu-menu-redes-sociales ul.menu.nav li a.menu-redes-sociales-Twitter{
-    background-image: url(../img/social-tw.png);
-    background-image: url(../img/social-tw.svg), none;
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-tw.png);
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-tw.svg), none;
     background-size: cover;
     background-color: transparent;
 }
 
 #block-menu-menu-redes-sociales ul.menu.nav li a.menu-redes-sociales-Google{
-    background-image: url(../img/social-gp.png);
-    background-image: url(../img/social-gp.svg), none;
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-gp.png);
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-gp.svg), none;
     background-size: cover;
     background-color: transparent;
 }
 
 
 #block-menu-menu-redes-sociales ul.menu.nav li a.menu-redes-sociales-Youtube{
-    background-image: url(../img/social-yt.png);
-    background-image: url(../img/social-yt.svg), none;
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-yt.png);
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-yt.svg), none;
     background-size: cover;
     background-color: transparent;
 }
 
 #block-menu-menu-redes-sociales ul.menu.nav li a.menu-redes-sociales-Flickr{
-    background-image: url(../img/social-fl.png);
-    background-image: url(../img/social-fl.svg), none;
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-fl.png);
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-fl.svg), none;
     background-size: cover;
     background-color: transparent;
 }
 
 
 #block-menu-menu-redes-sociales ul.menu.nav li a.menu-redes-sociales-RSS{
-    background-image: url(../img/social-rss.png);
-    background-image: url(../img/social-rss.svg), none;
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-rss.png);
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-rss.svg), none;
     background-size: cover;
     background-color: transparent;
 }
 
 .social-cc {
-    background-image: url(../img/social-cc.png);
-    background-image: url(../img/social-cc.svg), none;
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-cc.png);
+    background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/img/social-cc.svg), none;
     background-size: cover;
     margin-top: 10px;
 }
@@ -618,9 +618,9 @@ footer .links-rel li:nth-child(1){
 
 
 .jumbotron-misc {
-    /*background-image: url(http://gcba.github.io/BAstrap/docs/misc.jpg);*/
-    /*-ms-behavior: url(bastrap3/backgroundsize.min.htc);*/
-    /*background-size: cover;*/
+    background-image: url(http://gcba.github.io/BAstrap/docs/misc.jpg);
+    -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/backgroundsize.min.htc);
+    background-size: cover;
 }
 .panel-pane.pane-imagen-destacada .jumbotron {
     position: relative;
