@@ -309,7 +309,7 @@ input[type=checkbox]:focus {
   line-height: 32px;
   border-radius: 6px;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/bastrap3/pie.htc);
 }
 
 @media (max-width: 767px) {
@@ -1319,7 +1319,7 @@ a.list-group-item.active > .badge {
   -webkit-background-size: contain;
   background-size: contain;
   display: inline-block; 
-  -ms-behavior: url(../bastrap3/backgroundsize.min.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/backgroundsize.min.htc);
 }
 
 .bac-header:hover,
@@ -1340,22 +1340,22 @@ a.list-group-item.active > .badge {
 .bac-header {
   width: 170px;
   height: 60px;
-  background-image: url(bac-header-2.png);
-  background-image: url(bac-header-2.svg), none;
+  background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/bac-header-2.png);
+  background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/bac-header-2.svg), none;
 }
 
 .bac-footer {
   width: 255px;
   height: 45px;
-  background-image: url(bac-footer.png);
-  background-image: url(bac-footer.svg), none;
+  background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/bac-footer.png);
+  background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/bac-footer.svg), none;
 }
 
 .ba-btn {
   width: 51px;
   height: 30px;
-  background-image: url(ba-btn.png);
-  background-image: url(ba-btn.svg), none;
+  background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/ba-btn.png);
+  background-image: url(https://nicolasadrian.github.io/bastrap3/bastrap3/ba-btn.svg), none;
   position: relative;
   left: 4px;
   top: 7px;
@@ -1437,7 +1437,7 @@ a.list-group-item.active > .badge {
   text-shadow: none;
   background-color: transparent;
   min-height: 48px; 
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
 }
 
 .lt-ie9 .navbar {
@@ -2048,7 +2048,7 @@ ul.affix-bottom {
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   background-size: cover; 
-  -ms-behavior: url(../bastrap3/backgroundsize.min.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/backgroundsize.min.htc);
 }
 
 .jumbotron .container {
@@ -2084,7 +2084,7 @@ ul.affix-bottom {
   background: rgba(0, 0, 0, 0.4); 
 }
 .lt-ie9 .jumbotron-overlay {
-  background: url(black4.png) !important; 
+  background: url(https://nicolasadrian.github.io/bastrap3/bastrap3/black4.png) !important; 
 }
 
 .jumbotron-home {
@@ -2256,7 +2256,7 @@ ul.affix-bottom {
   padding: 10px 16px;
   border-radius: 4px; 
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
 }
 
 .pagination > li > a:hover,
@@ -2298,7 +2298,7 @@ ul.affix-bottom {
   border: 0;
   border-radius: 4px;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
   padding: 10px 16px;
 }
 
@@ -2325,7 +2325,7 @@ ul.affix-bottom {
 .label {
   font-weight: 400; 
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
 }
 
 .label-default {
@@ -2452,7 +2452,7 @@ ul.affix-bottom {
 .media img {
   border-radius: 4px; 
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
 }
 
 /* carousel */
@@ -2460,7 +2460,7 @@ ul.affix-bottom {
   margin-bottom: 30px;
   border-radius: 6px; 
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
 }
 
 .carousel a:hover img,
@@ -2508,7 +2508,7 @@ ul.affix-bottom {
 .carousel-inner {
   border-radius: 6px; 
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
 }
 
 .carousel-inner > .item {
@@ -2520,7 +2520,7 @@ ul.affix-bottom {
   width: 100%;
   border-radius: 6px; 
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
 }
 
 @media (max-width: 560px) {
@@ -2571,7 +2571,7 @@ ul.affix-bottom {
 .jumbotron > .carousel .carousel-inner {
   border-radius: 0; 
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
 }
 
 .jumbotron > .carousel p {
@@ -2598,7 +2598,7 @@ ul.affix-bottom {
   color: #333;
   border-radius: 6px;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
   display: block;
   background-color: transparent;
 }
@@ -2638,7 +2638,7 @@ ul.affix-bottom {
   height: 112px;
   border-radius: 56px;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
   display: block;
 }
 
@@ -2739,7 +2739,7 @@ ul.affix-bottom {
 .list-group {
   border-radius: 4px;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-box-shadow: 0 0 4px #aaa;
@@ -2824,7 +2824,7 @@ a.list-group-item:focus p {
 .list-group-panel-body .list-group-item:first-child {
   border-radius: 0; 
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
 }
 
 /* list-group-panel footer */
@@ -2930,7 +2930,7 @@ a.list-group-item:focus p {
   background-size: cover;
   overflow: auto;
   border-bottom: 0; 
-  -ms-behavior: url(../bastrap3/backgroundsize.min.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/backgroundsize.min.htc);
 }
 
 .list-heading-img h3 {
@@ -2978,8 +2978,8 @@ a.list-group-item:focus p {
   margin-right: 15px;
   border-radius: 4px; 
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
-  -ms-behavior: url(../bastrap3/backgroundsize.min.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/backgroundsize.min.htc);
 }
 
 @media (max-width: 560px) {
@@ -3026,7 +3026,7 @@ a.list-group-item:focus p {
   -webkit-background-size: cover;
   background-size: cover;
   text-align: center; 
-  -ms-behavior: url(../bastrap3/backgroundsize.min.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/backgroundsize.min.htc);
 }
 
 /* special panels */
@@ -3069,7 +3069,7 @@ a.list-group-item:focus p {
 .list-group-content .list-group-item {
   border-radius: 0;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -3113,7 +3113,7 @@ a.list-group-item:focus p {
   margin-bottom: 20px;
   border-radius: 4px;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
   background-color: #fff;
 }
 
@@ -3205,7 +3205,7 @@ a.list-group-item:focus p {
 .alert-spot {
   border-radius: 3px;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
   padding: 15px;
   margin-bottom: 30px;
   overflow: auto;
@@ -3361,7 +3361,7 @@ a.alert-spot:active {
   border: none;
   border-radius: 0px;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -3370,7 +3370,7 @@ a.alert-spot:active {
   margin: 0;
   border-radius: 0px;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -3380,7 +3380,7 @@ a.alert-spot:active {
   box-shadow: none;
   border-radius: 4px;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
   -webkit-box-shadow: 0px 0px 4px #aaa;
   box-shadow: 0px 0px 4px #aaa;
 }
@@ -3393,7 +3393,7 @@ a.alert-spot:active {
 #accordion .panel:first-child {
   border-radius: 0px;
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
@@ -3406,7 +3406,7 @@ a.alert-spot:active {
 #accordion .panel-heading {
   border-radius: 0px; 
   position: relative;
-  -ms-behavior: url(../bastrap3/pie.htc);
+  -ms-behavior: url(https://nicolasadrian.github.io/bastrap3/bastrap3/pie.htc);
 }
 
 #accordion .panel-group .panel {
@@ -3625,22 +3625,22 @@ a.alert-spot:active {
 /* Font files */
 @font-face {
   font-family: "OpenSans";
-  src: url("fonts/opensans-regular.eot");
-  src: url("fonts/opensans-regular.eot?#iefix") format("embedded-opentype"), 
-       url("fonts/opensans-regular.svg#OpenSansRegular") format("svg"), 
-       url("fonts/opensans-regular.woff") format("woff"), 
-       url("fonts/opensans-regular.ttf") format("truetype");
+  src: url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/opensans-regular.eot");
+  src: url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/opensans-regular.eot?#iefix") format("embedded-opentype"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/opensans-regular.svg#OpenSansRegular") format("svg"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/opensans-regular.woff") format("woff"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/opensans-regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; 
 }
 
 @font-face {
   font-family: "OpenSansBold";
-  src: url("fonts/opensans-bold.eot");
-  src: url("fonts/opensans-bold.eot?#iefix") format("embedded-opentype"), 
-       url("fonts/opensans-bold.svg#OpenSansRegular") format("svg"), 
-       url("fonts/opensans-bold.woff") format("woff"), 
-       url("fonts/opensans-bold.ttf") format("truetype");
+  src: url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/opensans-bold.eot");
+  src: url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/opensans-bold.eot?#iefix") format("embedded-opentype"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/opensans-bold.svg#OpenSansRegular") format("svg"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/opensans-bold.woff") format("woff"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/opensans-bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; 
 }
@@ -3658,22 +3658,22 @@ a.alert-spot:active {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url("fonts/glyphicons-halflings-regular.eot");
-  src: url("fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), 
-       url("fonts/glyphicons-halflings-regular.woff") format("woff"), 
-       url("fonts/glyphicons-halflings-regular.ttf") format("truetype"), 
-       url("fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); 
+  src: url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/glyphicons-halflings-regular.eot");
+  src: url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/glyphicons-halflings-regular.eot?#iefix") format("embedded-opentype"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/glyphicons-halflings-regular.woff") format("woff"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/glyphicons-halflings-regular.ttf") format("truetype"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular") format("svg"); 
 }
 
 
 /* BA Icon font */
 @font-face {
   font-family: "bastrap-icons";
-  src:url("fonts/bastrap-icons.eot");
-  src:url("fonts/bastrap-icons.eot?#iefix") format("embedded-opentype"),
-    url("fonts/bastrap-icons.woff") format("woff"),
-    url("fonts/bastrap-icons.ttf") format("truetype"),
-    url("fonts/bastrap-icons.svg#bastrap-icons") format("svg");
+  src:url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/bastrap-icons.eot");
+  src:url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/bastrap-icons.eot?#iefix") format("embedded-opentype"),
+    url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/bastrap-icons.woff") format("woff"),
+    url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/bastrap-icons.ttf") format("truetype"),
+    url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/bastrap-icons.svg#bastrap-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -3783,11 +3783,11 @@ a.alert-spot:active {
 
 @font-face {
   font-family: "CHANEWEI";
-  src: url("fonts/CHANEWEI.eot");
-  src: url("fonts/CHANEWEI.eot?#iefix") format("embedded-opentype"), 
-       url("fonts/CHANEWEI.svg#Gotham") format("svg"), 
-       url("fonts/CHANEWEI.woff") format("woff"), 
-       url("fonts/CHANEWEI.ttf") format("truetype");
+  src: url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/CHANEWEI.eot");
+  src: url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/CHANEWEI.eot?#iefix") format("embedded-opentype"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/CHANEWEI.svg#Gotham") format("svg"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/CHANEWEI.woff") format("woff"), 
+       url("https://nicolasadrian.github.io/bastrap3/bastrap3/fonts/CHANEWEI.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; 
 }
