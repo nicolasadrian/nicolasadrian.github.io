@@ -79,7 +79,7 @@ h1 {
 #infocontainer{
     width: 100%;
     height: auto;
-    background-color: #FFF;
+    background-color: #000;
     margin: 0;
     padding-top: 25px;
     position: relative;
@@ -110,7 +110,7 @@ blockquote {
   margin: 0 auto;
 }
 blockquote:before {
-  color: #ccc;
+  color: #000;
   content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
