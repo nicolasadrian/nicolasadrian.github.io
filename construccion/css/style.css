@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Abel|Open+Sans');
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+}
+
+#bg {
+    background-image: url('https://cdn3-www.musicfeeds.com.au/assets/uploads/gallery/a8398a559919760fd0d39db1723f2cd8/EdSheeran17.jpg');
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    -webkit-background-size: auto 100%; 
+    background-size: auto 100%;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: 15% 0%;
+    width: 100%;
+    height: 450px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink {
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+#tagline {
+    width: 50%;
+    margin-left: 55%;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #FFF;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5em;
+}
+
+.tagcontainer{
+    width: 100%;
+    height: 450px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    display: flex;
+}
+
+h1 {
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+}
+
+
+#infocontainer{
+    width: 100%;
+    height: auto;
+    background-color: #FFF;
+    margin: 0;
+    padding-top: 25px;
+    position: relative;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center justify;
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+
+ul, li {
+    font-family: 'Open Sans', sans-serif;
+    text-align: left;
+    list-style-position: inside;
+}
+
+blockquote {
+  background: #eaeaea;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-family: 'Open Sans', sans-serif;
+  width: 80%;
+  margin: 0 auto;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+  font-family: 'Open Sans', sans-serif;
+}
+blockquote p {
+  display: inline;
+}
+
+#listcontain{
+    width: 300px;
+    margin: 0 auto;
+}
+
+#footer {
+  position: absolute;
+  height: 50px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #eaeaea;
+  text-align: center;
+  line-height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: -70px;
+}
+
+.heart {color:#F00;}
