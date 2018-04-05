@@ -9,7 +9,7 @@
         this.searchRadius = options.searchRadius || 805; //in meters ~ 1/2 mile
 
         // the encrypted Table ID of your Fusion Table (found under File => About)
-        this.fusionTableId = options.fusionTableId || "1LLpwbXL4Kj2jvKuI-z0mu7MWdW54Y5FhUGypNFyJ",
+        this.fusionTableId = options.fusionTableId || "1oHHA0ew0xaxOHjsQcm0fRiuk14dXzM8o7YRBsrPt",
 
         // Found at https://console.developers.google.com/
         // Important! this key is for demonstration purposes. please register your own.
@@ -18,7 +18,7 @@
         // name of the location column in your Fusion Table.
         // NOTE: if your location column name has spaces in it, surround it with single quotes
         // example: locationColumn:     "'my location'",
-        this.locationColumn = options.locationColumn || "col27";
+        this.locationColumn = options.locationColumn || "col0"; /*Aca cambio la columna de ubicacion*/
         
         // appends to all address searches if not present
         this.locationScope = options.locationScope || "";
@@ -195,26 +195,27 @@
 	/*  self.whereClause += " AND 'col13' >= '" + $("#age-selected-start").html() + "'";
 self.whereClause += " AND 'col13' <= '" + $("#age-selected-end").html() + "'";
 */
-	  var text_search = $("#text_search").val().replace("'", "\\'");
+//COLUMNA SMP
+	  var text_search = $("#text_search").val().replace("'", "\\'"); 
 if (text_search != '')
-  self.whereClause += " AND 'col11' contains ignoring case '" + text_search + "'";
-	  
+  self.whereClause += " AND 'col7' contains ignoring case '" + text_search + "'";
+	  //BARRIO
 	  var text_search1 = $("#text_search1").val().replace("'", "\\'");
 if (text_search1 != '')
-  self.whereClause += " AND 'col20' contains ignoring case '" + text_search1 + "'";
-	   
+  self.whereClause += " AND 'col11' contains ignoring case '" + text_search1 + "'";
+	   //DISTRITO
 	   var text_search2 = $("#text_search2").val().replace("'", "\\'");
 if (text_search2 != '')
-  self.whereClause += " AND 'col19' contains ignoring case '" + text_search2 + "'";
-	  
+  self.whereClause += " AND 'col23' contains ignoring case '" + text_search2 + "'";
+	  //TIPO DE OBRA
 	   
 	   var text_search3 = $("#text_search3").val().replace("'", "\\'");
 if (text_search3 != '')
-  self.whereClause += " AND 'col18' contains ignoring case '" + text_search3 + "'";
-	  
+  self.whereClause += " AND 'col22' contains ignoring case '" + text_search3 + "'";
+	  //AÑO DE REGISTRO DE LA OBRA
 	   var text_search4 = $("#text_search4").val().replace("'", "\\'");
 if (text_search4 != '')
-  self.whereClause += " AND 'col13' contains ignoring case '" + text_search4 + "'";
+  self.whereClause += " AND 'col14' contains ignoring case '" + text_search4 + "'";
 	  
 	  
         //-----end of custom filters-----
