@@ -1,0 +1,94 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width" name="viewport"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <script src="./resources/jquery.min.js">
+  </script>
+  <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="./resources/bootstrap/js/bootstrap.min.js">
+  </script>
+  <link href="webapp.css" rel="stylesheet"/>
+  <script src="./resources/ol.js">
+  </script>
+  <script src="./resources/ol3-extra-controls.js">
+  </script>
+  <script src="./resources/tools.js">
+  </script>
+  <script src="layers/lyr_catastro_espacios_verdes_269218.js">
+  </script>
+  <script src="styles/catastro_espacios_verdes_269218.js">
+  </script>
+  <script src="./layers/layers.js" type="text/javascript">
+  </script>
+  <title>
+   PDI - Espacios Verdes Catastrales
+  </title>
+ </head>
+ <body>
+  <nav class="navbar navbar-default" id="toolbar" role="navigation">
+   <div class="navbar-header">
+    <button class="navbar-toggle" data-target="#navbar" data-toggle="collapse" type="button">
+     <span class="sr-only">
+      Toggle navigation
+     </span>
+     <span class="icon-bar">
+     </span>
+     <span class="icon-bar">
+     </span>
+     <span class="icon-bar">
+     </span>
+    </button>
+    <a class="navbar-brand" href="#">
+     PDI - Espacios Verdes Catastrales
+    </a>
+   </div>
+   <div class="collapse navbar-collapse" id="navbar">
+    <ul class="nav navbar-nav navbar-right">
+     <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+       Medir
+       <span class="caret">
+        <span>
+        </span>
+       </span>
+      </a>
+      <ul class="dropdown-menu">
+       <li>
+        <a href="#" onclick="measureTool('distance')">
+         Distancia
+        </a>
+       </li>
+       <li>
+        <a href="#" onclick="measureTool('area')">
+         Area
+        </a>
+       </li>
+       <li>
+        <a href="#" onclick="measureTool(null)">
+         Borrar mediciones
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </div>
+  </nav>
+  <div id="content">
+   <div id="map">
+    <div class="ol-popup" id="popup">
+     <a class="closer-icon" href="#" id="popup-closer">
+      &times;
+     </a>
+     <div id="popup-content">
+      Popup
+     </div>
+    </div>
+   </div>
+  </div>
+  <script src="./index.js">
+  </script>
+ </body>
+</html>
