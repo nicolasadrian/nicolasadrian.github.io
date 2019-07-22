@@ -133,7 +133,7 @@ var map = L.map('map', {
     fullscreenControl: true,
     timeDimension: true,
     timeDimensionOptions: {
-        timeInterval: "01-06-2017/" + currentTime.toISOString(),
+        timeInterval: "2017-06-01/" + currentTime.toISOString(),
         period: "P1M",
         currentTime: currentTime
     },
