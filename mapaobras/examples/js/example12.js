@@ -133,7 +133,7 @@ var map = L.map('map', {
     fullscreenControl: true,
     timeDimension: true,
     timeDimensionOptions: {
-        timeInterval: "2017-06-01/" + currentTime.toISOString(),
+        timeInterval: "2017/06/01/" + currentTime.toISOString(),
         period: "P1M",
         currentTime: currentTime
     },
@@ -144,7 +144,7 @@ var layer = new L.StamenTileLayer("toner-lite");
 map.addLayer(layer);
 
 var testSODALayer = L.timeDimension.layer.sodaHeatMap({
-    baseURL: 'obras.json?$select=N° EXPEDI,NOMENC.PAR,FECHA,DIRECCION,TIPO DE OB,M2.,ESTADO,Trata,CIUDAD,PAIS',
+    baseURL: 'http://nicolasadrian.github.io/mapaobras/examples/js/obras.json?$select=N° EXPEDI,NOMENC.PAR,FECHA,DIRECCION,TIPO DE OB,M2.,ESTADO,Trata,CIUDAD,PAIS',
 });
 testSODALayer.addTo(map);
 map.attributionControl.addAttribution('<a href="https://nycopendata.socrata.com/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9">NYC OpenData</a>');
