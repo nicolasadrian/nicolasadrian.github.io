@@ -101,6 +101,7 @@
 	center: [-58.437, -34.663]
 	});
 	 // Add zoom and rotation controls to the map.
+
 	map.addControl(new mapboxgl.NavigationControl());
 
 		map.on('load', function() {
@@ -153,7 +154,7 @@
 				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
 			});
 			map.addLayer({
-				'id': 'Distritos Economicos',
+				'id': 'DistritosEconomicos',
 				'type': 'fill',
 				'source': 'DistritosEconomicos',
 				'layout': {
@@ -207,7 +208,8 @@
 			});
 		});
 	 
-	 
+	 map.addControl(L.mapbox.legendControl());
+
 	</script>
 
 	</div><!-- /.map -->
@@ -216,7 +218,7 @@
 	<script>
 
 		// enumerate ids of the layers
-		var toggleableLayerIds = ['Ciclovias', 'Arbolado', 'Cuencas', 'Arroyos', 'Distritos Economicos'];
+		var toggleableLayerIds = ['Ciclovias', 'Arbolado', 'Cuencas', 'Arroyos', 'DistritosEconomicos'];
 
 	// set up the corresponding toggle button for each layer
 	for (var i = 0; i < toggleableLayerIds.length; i++) {
@@ -251,6 +253,8 @@
 
 	}
 	</script>
+
+
 
 
 	</div>
