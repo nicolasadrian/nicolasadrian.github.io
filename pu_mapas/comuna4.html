@@ -1,55 +1,268 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='utf-8' />
-    <title></title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
-    </style>
-</head>
-<body>
 
-<div id='map'></div>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoibmljb2xhc2FkcmlhYW4iLCJhIjoiY2tiZGRybG5wMGF3ZjJyb2k5ZmRwNDh1eSJ9.jBSna0avs6It_0nyrAOuSA';
-var map = new mapboxgl.Map({
-    style: 'mapbox://styles/nicolasadriaan/ckbdfbt9q0tz51jmlihtzvv4e',
-    center: [-3.705804, 40.419951],
-    zoom: 15,
-    pitch: 45,
-    bearing: -17.6,
-    container: 'map'
-});
+	<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+	<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+	<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
 
-//La capa 'building' de mapbox-streets contiene las alturas de los edificios.
-//Datos de OpenStreetMap.
-map.on('load', function() {
-    map.addLayer({
-        'id': '3d-buildings',
-        'source': 'composite',
-        'source-layer': 'building',
-        'filter': ['==', 'extrude', 'true'],
-        'type': 'fill-extrusion',
-        'minzoom': 15,
-        'paint': {
-            'fill-extrusion-color': '#aaa',
-            'fill-extrusion-height': {
-                'type': 'identity',
-                'property': 'height'
-            },
-            'fill-extrusion-base': {
-                'type': 'identity',
-                'property': 'min_height'
-            },
-            'fill-extrusion-opacity': .6
-        }
-    });
-});
-</script>
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../../favicon.ico">
 
-</body>
-</html>
+		<title>Planificacion Urbana Catedra Giglio - FADU UBA</title>
+		<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+		<!-- Bootstrap core CSS -->
+		<link href="https://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="https://v4-alpha.getbootstrap.com/examples/starter-template/starter-template.css" rel="stylesheet">
+	  </head>
+	  <style>
+		body { margin: 0; padding: 0; }
+		#map { position: absolute; top: 50px; bottom: 0; width: 100%; }
+	</style>
+	  
+	<style>
+	#menu {
+	background: #292b2c;
+	position: absolute;
+	z-index: 1;
+	top: 55px;
+	right: 0px;
+	border-radius: 0px;
+	border: 0px solid rgba(0, 0, 0, 0.4);
+	font-family: 'Open Sans', sans-serif;
+	}
+	 
+	#menu a {
+	font-size: 13px;
+	color: #808080;
+	display: block;
+	margin: 0;
+	padding: 0;
+	padding: 10px;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+	text-align: center;
+	}
+	 
+	#menu a:last-child {
+	border: none;
+	}
+	 
+	#menu a:hover {
+	background-color: #f8f8f8;
+	color: #404040;
+	}
+	 
+	#menu a.active {
+	background-color: #292b2c;
+	color: #fff;
+	}
+	 
+	#menu a.active:hover {
+	background: #3074a4;
+	}
+	</style>
+
+	  <body>
+
+		<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+		  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <a class="navbar-brand" href="#">Planificacion Urbana - Catedra Giglio</a>
+
+		  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+			<ul class="navbar-nav mr-auto">
+			  <li class="nav-item active">
+				<a class="nav-link" href="#">Blog <span class="sr-only">(current)</span></a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Campus FADU</a>
+			  </li>
+			  
+			</ul>
+			
+		  </div>
+		</nav>
+	<div class="col-sm-10" id="map">
+	 
+	<script>
+	mapboxgl.accessToken = 'pk.eyJ1Ijoibmljb2xhc2FkcmlhYW4iLCJhIjoiY2tiZGRybG5wMGF3ZjJyb2k5ZmRwNDh1eSJ9.jBSna0avs6It_0nyrAOuSA';
+	var map = new mapboxgl.Map({
+	container: 'map',
+	style: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n',
+	zoom: 12,
+	center: [-58.437, -34.663]
+	});
+	 // Add zoom and rotation controls to the map.
+	map.addControl(new mapboxgl.NavigationControl());
+
+		map.on('load', function() {
+			
+			
+			
+			// add source and layer for museums
+			map.addSource('Arroyos', {
+				type: 'vector',
+				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
+			});
+			map.addLayer({
+				'id': 'Arroyos',
+				'type': 'line',
+				'source': 'Arroyos',
+				'layout': {
+					// make layer visible by default
+					'visibility': 'visible'
+				},
+				'paint': {
+					'circle-radius': 8,
+					'circle-color': 'rgba(55,148,179,1)'
+				},
+				'source-layer': 'Arroyos'
+			});
+			
+			// add source and layer for museums
+			map.addSource('Cuencas', {
+				type: 'vector',
+				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
+			});
+			map.addLayer({
+				'id': 'Cuencas',
+				'type': 'line',
+				'source': 'Cuencas',
+				'layout': {
+					// make layer visible by default
+					'visibility': 'visible'
+				},
+				'paint': {
+					'circle-radius': 8,
+					'circle-color': 'rgba(55,148,179,1)'
+				},
+				'source-layer': 'Cuencas'
+			});
+			
+			// add source and layer for museums
+			map.addSource('DistritosEconomicos', {
+				type: 'vector',
+				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
+			});
+			map.addLayer({
+				'id': 'DistritosEconomicos',
+				'type': 'fill',
+				'source': 'DistritosEconomicos',
+				'layout': {
+					// make layer visible by default
+					'visibility': 'visible'
+				},
+				'paint': {
+					'circle-radius': 8,
+					'circle-color': 'rgba(55,148,179,1)'
+				},
+				'source-layer': 'DistritosEconomicos'
+			});
+			
+			
+			// add source and layer for museums
+			map.addSource('Arbolado', {
+				type: 'vector',
+				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
+			});
+			map.addLayer({
+				'id': 'Arbolado',
+				'type': 'circle',
+				'source': 'Arbolado',
+				'layout': {
+					// make layer visible by default
+					'visibility': 'visible'
+				},
+				'paint': {
+					'circle-radius': 8,
+					'circle-color': 'rgba(55,148,179,1)'
+				},
+				'source-layer': 'Arbolado'
+			});
+
+			// add source and layer for contours
+			map.addSource('Ciclovias', {
+				type: 'vector',
+				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
+			});
+			map.addLayer({
+				'id': 'Ciclovias',
+				'type': 'line',
+				'source': 'Ciclovias',
+				'source-layer': 'Ciclovias',
+				'layout': {
+					// make layer visible by default
+					'visibility': 'visible',
+					'line-join': 'round',
+					'line-cap': 'round'
+				},
+			});
+		});
+	 
+	 
+	</script>
+
+	</div><!-- /.map -->
+
+	<div class="col-sm-2" id="menu">
+	<script>
+
+		// enumerate ids of the layers
+		var toggleableLayerIds = ['Ciclovias', 'Arbolado', 'Cuencas', 'Arroyos', 'DistritosEconomicos'];
+
+	// set up the corresponding toggle button for each layer
+	for (var i = 0; i < toggleableLayerIds.length; i++) {
+	var id = toggleableLayerIds[i];
+	 
+	var link = document.createElement('a');
+	link.href = '#';
+	link.className = 'active';
+	link.textContent = id;
+	 
+	link.onclick = function(e) {
+	var clickedLayer = this.textContent;
+	e.preventDefault();
+	e.stopPropagation();
+	 
+	var visibility = map.getLayoutProperty(clickedLayer, 'visibility');
+	 
+	// toggle layer visibility by changing the layout object's visibility property
+	if (visibility === 'visible') {
+	map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+	this.className = '';
+	} else {
+	this.className = 'active';
+	map.setLayoutProperty(clickedLayer, 'visibility', 'visible');
+	}
+	};
+	 
+	var layers = document.getElementById('menu');
+	layers.appendChild(link);
+
+
+
+	}
+	</script>
+
+
+	</div>
+
+		<!-- Bootstrap core JavaScript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="https://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+	  </body>
+	</html>

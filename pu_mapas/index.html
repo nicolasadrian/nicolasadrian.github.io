@@ -5,8 +5,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
-	<script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
-	<link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+	<script src="./mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+	<link href="./mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
 
 		<meta name="description" content="">
 		<meta name="author" content="">
@@ -182,14 +182,66 @@
 				'id': 'Ciclovias',
 				'type': 'line',
 				'source': 'Ciclovias',
-				'source-layer': 'Ciclovias',
 				'layout': {
 					// make layer visible by default
 					'visibility': 'visible',
-					'line-join': 'round',
-					'line-cap': 'round'
 				},
+				'source-layer': 'Ciclovias',
 			});
+			
+			
+			// add source and layer for contours
+			map.addSource('Riesgo-Hidrico', {
+				type: 'vector',
+				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
+			});
+			map.addLayer({
+				'id': 'Riesgo-Hidrico',
+				'type': 'line',
+				'source': 'Riesgo-Hidrico',
+				'layout': {
+					// make layer visible by default
+					'visibility': 'visible',
+				},
+				'source-layer': 'Riesgo-Hidrico',
+			});
+			
+			
+			// add source and layer for contours
+			map.addSource('Cotas-Nivel', {
+				type: 'vector',
+				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
+			});
+			map.addLayer({
+				'id': 'Cotas-Nivel',
+				'type': 'line',
+				'source': 'Cotas-Nivel',
+				'layout': {
+					// make layer visible by default
+					'visibility': 'visible',
+				},
+				'source-layer': 'Cotas-Nivel',
+			});
+			
+			// add source and layer for contours
+			map.addSource('Asentamientos', {
+				type: 'vector',
+				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
+			});
+			map.addLayer({
+				'id': 'Asentamientos',
+				'type': 'line',
+				'source': 'Asentamientos',
+				'layout': {
+					// make layer visible by default
+					'visibility': 'visible',
+				},
+				'source-layer': 'Asentamientos',
+			});
+			
+			
+			
+			
 		});
 	 
 	 map.addControl(L.mapbox.legendControl());
@@ -202,7 +254,7 @@
 	<script>
 
 		// enumerate ids of the layers
-		var toggleableLayerIds = ['Ciclovias', 'Arbolado', 'Cuencas', 'Arroyos', 'DistritosEconomicos'];
+		var toggleableLayerIds = ['Ciclovias', 'Arbolado', 'Cuencas', 'Arroyos', 'DistritosEconomicos', 'Cotas-Nivel', 'Riesgo-Hidrico', 'Asentamientos'];
 
 	// set up the corresponding toggle button for each layer
 	for (var i = 0; i < toggleableLayerIds.length; i++) {
