@@ -257,25 +257,9 @@
 			
 			
 			// add source and layer for contours
-			map.addSource('Poligonos-Industriales', {
-				type: 'vector',
-				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
-			});
-			map.addLayer({
-				'id': 'Poligonos-Industriales',
-				'type': 'line',
-				'source': 'Poligonos-Industriales',
-				'layout': {
-					// make layer visible by default
-					'visibility': 'visible',
-				},
-				'source-layer': 'Poligonos-Industriales',
-			});
-				
-			// add source and layer for contours
 			map.addSource('Hospitales', {
 				type: 'vector',
-				url: 'mapbox://styles/nicolasadriaan/ckbn4w1oy21sj1irufi53g7ng'
+				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
 			});
 			map.addLayer({
 				'id': 'Hospitales',
@@ -286,6 +270,23 @@
 					'visibility': 'visible',
 				},
 				'source-layer': 'Hospitales',
+			});
+			
+			
+			// add source and layer for contours
+			map.addSource('Supermercados', {
+				type: 'vector',
+				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
+			});
+			map.addLayer({
+				'id': 'Supermercados',
+				'type': 'line',
+				'source': 'Supermercados',
+				'layout': {
+					// make layer visible by default
+					'visibility': 'visible',
+				},
+				'source-layer': 'Supermercados',
 			});
 			
 			
@@ -303,7 +304,7 @@
 	<script>
 
 		// enumerate ids of the layers
-		var toggleableLayerIds = ['Ciclovias', 'Arbolado', 'Cuencas', 'Arroyos', 'Distritos-Economicos', 'Cotas-Nivel', 'Riesgo-Hidrico', 'Conjuntos-Habitacionales', 'Asentamientos', 'Poligonos-Industriales', 'Hospitales'];
+		var toggleableLayerIds = ['Ciclovias', 'Arbolado', 'Cuencas', 'Arroyos', 'Distritos-Economicos', 'Cotas-Nivel', 'Riesgo-Hidrico', 'Conjuntos-Habitacionales', 'Asentamientos', 'Hospitales', 'Supermercados'];
 
 	// set up the corresponding toggle button for each layer
 	for (var i = 0; i < toggleableLayerIds.length; i++) {
