@@ -109,20 +109,26 @@
 			
 			
 			// add source and layer for museums
-			map.addSource('Arroyos', {
-				type: 'vector',
-				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
-			});
-			map.addLayer({
-				'id': 'Arroyos',
-				'type': 'line',
-				'source': 'Arroyos',
-				'layout': {
-					// make layer visible by default
-					'visibility': 'visible'
-				},
-				'source-layer': 'Arroyos'
-			});
+        map.addSource('Arroyos', {
+            type: 'vector',
+            url: 'mapbox://nicolasadriaan.beohur8y'
+        });
+        map.addLayer({
+            'id': 'Arroyos',
+            'type': 'line',
+            'source': 'Arroyos-2wl94p',
+            'layout': {
+                // make layer visible by default
+                'visibility': 'visible'
+            },
+            'paint': {
+'line-color': '#877b59',
+'line-width': 1
+},
+            'source-layer': 'Arroyos-2wl94p'
+        });
+
+			
 			
 			// add source and layer for museums
 			map.addSource('Cuencas', {
@@ -138,22 +144,6 @@
 					'visibility': 'visible'
 				},
 				'source-layer': 'Cuencas'
-			});
-			
-			// add source and layer for museums
-			map.addSource('Distritos-Economicos', {
-				type: 'vector',
-				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
-			});
-			map.addLayer({
-				'id': 'Distritos-Economicos',
-				'type': 'fill',
-				'source': 'Distritos-Economicos',
-				'layout': {
-					// make layer visible by default
-					'visibility': 'visible'
-				},
-				'source-layer': 'Distritos-Economicos'
 			});
 			
 			
@@ -304,7 +294,7 @@
 	<script>
 
 		// enumerate ids of the layers
-		var toggleableLayerIds = ['Ciclovias', 'Arbolado', 'Cuencas', 'Arroyos', 'Distritos-Economicos', 'Cotas-Nivel', 'Riesgo-Hidrico', 'Conjuntos-Habitacionales', 'Asentamientos', 'Hospitales', 'Supermercados'];
+		var toggleableLayerIds = ['Ciclovias', 'Arbolado', 'Cuencas', 'Arroyos',  'Cotas-Nivel', 'Riesgo-Hidrico', 'Conjuntos-Habitacionales', 'Asentamientos', 'Hospitales', 'Supermercados'];
 
 	// set up the corresponding toggle button for each layer
 	for (var i = 0; i < toggleableLayerIds.length; i++) {
