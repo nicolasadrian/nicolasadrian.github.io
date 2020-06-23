@@ -268,17 +268,6 @@
 				type: 'vector',
 				url: 'mapbox://styles/nicolasadriaan/ckbn5ktt31iuf1iqrz9qb570n'
 			});
-			map.addLayer({
-				'id': 'Supermercados',
-				'type': 'line',
-				'source': 'Supermercados',
-				'layout': {
-					// make layer visible by default
-					'visibility': 'visible',
-				},
-				'source-layer': 'Supermercados',
-			});
-			
 			
 			
 			
@@ -294,7 +283,7 @@
 	<script>
 
 		// enumerate ids of the layers
-		var toggleableLayerIds = ['Ciclovias', 'Arbolado', 'Cuencas', 'Arroyos',  'Cotas-Nivel', 'Riesgo-Hidrico', 'Conjuntos-Habitacionales', 'Asentamientos', 'Hospitales', 'Supermercados'];
+		var toggleableLayerIds = ['Ciclovias', 'Arbolado', 'Cuencas', 'Arroyos',  'Cotas-Nivel', 'Riesgo-Hidrico', 'Conjuntos-Habitacionales', 'Asentamientos', 'Hospitales'];
 
 	// set up the corresponding toggle button for each layer
 	for (var i = 0; i < toggleableLayerIds.length; i++) {
